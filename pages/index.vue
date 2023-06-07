@@ -7,12 +7,12 @@
     <label>Ask OpenAI a question</label>
     <query-input v-model="queryInput" @isLoading="isLoading = $event" @contentReceived="content = $event" />
     <div class="card mt-5">
-      <div class="card-title px-3 py-2">
-        {{ isLoading == false && !content ? "Please input query and generate ChatGPT output" : isLoading == true ? "Loading..." : queryInput }}</div>
-      </div>
+      <div class="card-title border-bottom px-3 py-2">
+        {{ isLoading == false && !content ? "Please input query and generate ChatGPT output" : isLoading == true ? "Loading..." : "Output for \"" + queryInput + "\"" }}</div>
       <div class="card-body" v-if="isLoading == false" v-html="content">
       </div>
-      <div class="loading" v-else>Loading...</div>
+      </div>
+
     </div>
 </template>
 
