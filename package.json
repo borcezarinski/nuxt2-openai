@@ -1,0 +1,15 @@
+{
+  "name": "nuxt2-openai",
+  "author": "Boris Zarinski",
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "start": "nuxt start"
+  },
+  "dependencies": {
+    "nuxt": "^2.16.1",
+    "openai": "^3.2.1",
+    "@nuxtjs/dotenv": "^1.4.1"
+  }
+}
