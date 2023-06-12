@@ -5,15 +5,18 @@
       <img src="/img/openai.svg" class="img img-responsive" style="max-width:30%;" />
     </div>
     <label>Ask OpenAI a question</label>
-    <query-input v-model="queryInput" @isLoading="isLoading = $event" @contentReceived="content = $event" />
-    <div class="card mt-5">
+    <query-input v-model="queryInput" @isLoading="isLoading = $event; $event == true ? content = AIImage = null : outputKey++" @contentReceived="content = $event"  @imageReceived="AIImage = $event"/>
+    <div class="card mt-5" :key="'output-card-' + outputKey">
       <div class="card-title border-bottom px-3 py-2">
-        {{ isLoading == false && !content ? "Please input query and generate ChatGPT output" : isLoading == true ? "Loading..." : "Output for \"" + queryInput + "\"" }}</div>
-      <div class="card-body" v-if="isLoading == false" v-html="content">
+        Please input query and generate ChatGPT output
       </div>
+      <div class="card-body" v-if="isLoading == false && content" v-html="content">
       </div>
-
+      <div class="card-body" v-else-if="isLoading == false && AIImage"><img :src="AIImage" class="img img-fluid" /></div>
+      <div class="card-body p-5 text-center" v-else-if="isLoading == false">Output will appear here</div>
+      <div class="card-body p-5 text-center" v-else-if="isLoading">Loading...</div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -29,9 +32,11 @@ export default {
 components:{queryInput},
   data() {
     return {
+      outputKey:1,
       isLoading: false,
       content: "",
-      queryInput:"How much is 2+2?",
+      AIImage: null,
+      queryInput:"",
     };
   },
 };

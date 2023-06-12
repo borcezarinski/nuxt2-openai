@@ -1,13 +1,18 @@
 # Nuxt2 OpenAI Integration
 
 Seamlessly integrate OpenAI's language processing capabilities into your Nuxt.js 2 applications. This comprehensive package allows you to leverage OpenAI's cutting-edge language models to enable human-like text generation, translation, sentiment analysis, and more. Unlock the full potential of Nuxt.js and OpenAI to build intelligent and dynamic applications.
-![Nuxt2-openAI screenshot](https://github.com/borcezarinski/nuxt2-openai/blob/main/static/img/screenshot.PNG?raw=true)
+
+![Nuxt2-openAI screenshot](https://github.com/borcezarinski/nuxt2-openai/blob/main/static/img/screenshot-1.PNG?raw=true)
+
+![Nuxt2-openAI screenshot](https://github.com/borcezarinski/nuxt2-openai/blob/main/static/img/screenshot-2.PNG?raw=true)
+
+![Nuxt2-openAI screenshot](https://github.com/borcezarinski/nuxt2-openai/blob/main/static/img/screenshot-3.PNG?raw=true)
+
 ## Features
 
-- **Human-like Text Generation:** Generate high-quality text that closely mimics human writing.
-- **Language Translation:** Translate text between different languages with accuracy.
-- **Sentiment Analysis:** Analyze the sentiment and emotional tone of textual content.
-- **And More:** Explore additional language processing capabilities offered by OpenAI's models.
+- **ChatGPT Text Generation:** Generate high-quality text that closely mimics human writing.
+- **DALL·E 2 Image Generation:** Generate visually stunning images with exceptional quality 
+
 
 ## Getting Started
 
